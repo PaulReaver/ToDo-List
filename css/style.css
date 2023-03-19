@@ -64,6 +64,10 @@ header h1 {
 
 .content {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 5fr;
+    display: flex;
+}
+
+aside {
+    width: 300px;
+    border-right: 2px solid var(--secondary-color);
 }
