@@ -3,12 +3,17 @@
     --primary-color: #0d1117;
     --secondary-color: #21262d;
     --off-white-color: #e8eaed;
+    --off-white-semiopaque: #e8eaed66;
     --low-priority-color: #00ff00;
     --medium-priority-color: #ffa500;
     --high-priority-color: #ff0000;
 
     /* Font application */
     font-family: 'Hanken Grotesk', sans-serif;
+
+    /* Font sizes */
+    --h1-size: 2rem;
+    --h2-size: 1.5rem;
 }
 
 /* hanken-grotesk-regular - latin */
@@ -55,7 +60,7 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: var(--h1-size);
     color: var(--off-white-color);
     font-weight: 700;
     margin-bottom: 1em;
@@ -65,9 +70,48 @@ header h1 {
 .content {
     margin-top: 2rem;
     display: flex;
+    align-items: center;
 }
 
 aside {
     width: 300px;
     border-right: 2px solid var(--secondary-color);
+    padding-right: 1rem;
+}
+
+.add-project-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#add-project-input::placeholder {
+    color: var(--off-white-semiopaque);
+}
+
+#add-project-input {
+    color: var(--off-white-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5em;
+    padding: 0.3em 0.6em;
+}
+
+#add-project-input:focus-visible {
+    border-color: var(--off-white-color);
+}
+
+#submit-project-input {
+    color: var(--off-white-color);
+    border: 1px solid var(--off-white-color);
+    padding: 0.3em 0.6em;
+    border-radius: 1em;
+    visibility: hidden;
+}
+
+#submit-project-input:hover {
+    color: var(--low-priority-color);
+    border-color: var(--low-priority-color);
+}
+
+#add-project-input:not(:placeholder-shown) + #submit-project-input {
+    visibility: visible;
 }
