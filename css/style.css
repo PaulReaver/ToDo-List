@@ -76,7 +76,7 @@ header h1 {
 aside {
     width: 300px;
     border-right: 2px solid var(--secondary-color);
-    padding-right: 1rem;
+    padding-right: 2rem;
 }
 
 .add-project-container {
