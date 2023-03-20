@@ -107,9 +107,11 @@ aside {
     visibility: hidden;
 }
 
-#submit-project-input:hover {
-    color: var(--low-priority-color);
-    border-color: var(--low-priority-color);
+@media (hover: hover) {
+    #submit-project-input:hover {
+        color: var(--low-priority-color);
+        border-color: var(--low-priority-color);
+    }
 }
 
 #add-project-input:not(:placeholder-shown) + #submit-project-input {
