@@ -101,19 +101,30 @@ aside {
 
 #submit-project-input {
     color: var(--off-white-color);
-    border: 1px solid var(--off-white-color);
     padding: 0.3em 0.6em;
-    border-radius: 1em;
     visibility: hidden;
 }
 
 @media (hover: hover) {
     #submit-project-input:hover {
+        outline: 1px solid var(--low-priority-color);
+        border-radius: 1em;
         color: var(--low-priority-color);
-        border-color: var(--low-priority-color);
     }
 }
 
 #add-project-input:not(:placeholder-shown) + #submit-project-input {
     visibility: visible;
+}
+
+.project-list-nav {
+    margin-top: var(--h1-size);
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--off-white-color);
+    font-size: var(--h2-size);
 }
