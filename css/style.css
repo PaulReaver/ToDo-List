@@ -96,18 +96,19 @@ aside {
 }
 
 #add-project-input:focus-visible {
-    border-color: var(--off-white-color);
+    background-color: var(--secondary-color);
 }
 
 #submit-project-input {
     color: var(--off-white-color);
     padding: 0.3em 0.6em;
     visibility: hidden;
+    font-size: var(--h2-size);
 }
 
 @media (hover: hover) {
     #submit-project-input:hover {
-        outline: 1px solid var(--low-priority-color);
+        background-color: var(--secondary-color);
         border-radius: 1em;
         color: var(--low-priority-color);
     }
@@ -125,6 +126,21 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--off-white-color);
+}
+
+.project-name {
+    flex: 1;
+    color: var(--off-white-semiopaque);
     font-size: var(--h2-size);
+}
+
+.project-delete-button {
+    visibility: hidden;
+}
+
+@media (hover: hover) {
+    .project-name:hover {
+        color: var(--off-white-color);
+        font-weight: 700;
+    }
 }
