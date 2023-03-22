@@ -101,7 +101,7 @@ aside {
 
 #submit-project-input {
     color: var(--off-white-color);
-    padding: 0.3em 0.6em;
+    padding: 0.3rem 0.6rem;
     visibility: hidden;
     font-size: var(--h2-size);
 }
@@ -132,6 +132,7 @@ aside {
     flex: 1;
     color: var(--off-white-semiopaque);
     font-size: var(--h2-size);
+    padding: 0.3rem 0.6rem;
 }
 
 .project-delete-button {
