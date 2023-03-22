@@ -4,7 +4,7 @@ export default function populateProjectList() {
     for (let i = 0; i < projectList.length; i += 1) {
         const li = document.createElement('li');
         li.classList.add('project-item');
-        const projectName = document.createElement('button');
+        const projectName = document.createElement('h2');
         projectName.classList.add('project-name');
         projectName.textContent = `${projectList[i]}`;
         const projectDeleteButton = document.createElement('button');
