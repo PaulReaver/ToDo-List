@@ -15,5 +15,14 @@ export default function populateProjectList() {
         projectDeleteButton.textContent = '🗑';
         li.append(projectName, projectDeleteButton);
         projectListUl.append(li);
+        projectName.addEventListener('click', () => {
+            const previousActiveProject =
+                document.querySelector('.active-project');
+            previousActiveProject.classList.remove('active-project');
+            projectName.classList.add('active-project');
+        });
+        if (i === projectList.length - 1) {
+            projectName.classList.add('active-project');
+        }
     }
 }
