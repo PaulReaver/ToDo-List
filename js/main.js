@@ -6,8 +6,7 @@ import '../css/style.css';
 import populateProjectList from './populate-project-list';
 import { addProject } from './project-list';
 
-const submitProjectInput = document.querySelector('#submit-project-input');
-submitProjectInput.addEventListener('click', (e) => {
+document.addEventListener('submit', (e) => {
     e.preventDefault();
     addProject();
 });
