@@ -9,6 +9,7 @@ import { addProject } from './project-list';
 document.addEventListener('submit', (e) => {
     e.preventDefault();
     addProject();
+    populateProjectList();
 });
 
 populateProjectList();
