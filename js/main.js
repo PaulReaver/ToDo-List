@@ -6,10 +6,13 @@ import '../css/style.css';
 import populateProjectList from './populate-project-list';
 import { addProject } from './project-list';
 
-document.addEventListener('submit', (e) => {
+const addProjectForm = document.querySelector('.add-project-form');
+
+addProjectForm.addEventListener('submit', (e) => {
     e.preventDefault();
     addProject();
     populateProjectList();
+    addProjectForm.reset();
 });
 
 populateProjectList();
