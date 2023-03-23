@@ -1,7 +1,8 @@
 const projectList = ['General'];
 
 export function addProject() {
-    console.log('yolo');
+    const newProject = document.getElementById('add-project-input').value;
+    projectList.push(newProject);
 }
 
 export default projectList;
