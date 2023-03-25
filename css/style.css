@@ -84,9 +84,10 @@ aside {
     padding-right: var(--large-gap);
 }
 
-.add-project-container {
+.add-project-form {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 #add-project-input::placeholder {
@@ -140,6 +141,7 @@ aside {
     color: var(--off-white-semiopaque);
     font-size: var(--h2-size);
     padding: 0.3rem 0.6rem;
+    margin-right: var(--small-gap);
     cursor: default;
 }
 
@@ -158,5 +160,16 @@ aside {
 }
 
 .project-delete-button {
-    visibility: hidden;
+    /* visibility: hidden; */
+    font-size: var(--h2-size);
+    color: var(--off-white-color);
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+}
+
+@media (hover: hover) {
+    .project-delete-button:hover {
+        color: var(--high-priority-color);
+        background-color: var(--secondary-color);
+    }
 }
