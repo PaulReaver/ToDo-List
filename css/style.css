@@ -18,6 +18,9 @@
     /* Paddings/Margins */
     --large-gap: 2rem;
     --small-gap: 0.5rem;
+
+    /* Border radius */
+    --border-radius: 0.5em;
 }
 
 /* hanken-grotesk-regular - latin */
@@ -93,7 +96,7 @@ aside {
 #add-project-input {
     color: var(--off-white-color);
     border: 1px solid var(--secondary-color);
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     padding: 0.3em 0.6em;
 }
 
@@ -104,7 +107,7 @@ aside {
 #submit-project-input {
     color: var(--off-white-color);
     padding: 0.3rem 0.6rem;
-    border-radius: 1em;
+    border-radius: 50%;
     visibility: hidden;
     font-size: var(--h2-size);
 }
@@ -149,7 +152,7 @@ aside {
 
 .active-project {
     background-color: var(--secondary-color);
-    border-radius: 0.5em;
+    border-radius: var(--border-radius);
     color: var(--off-white-color);
     font-weight: 700;
 }
