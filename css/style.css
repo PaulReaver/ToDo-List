@@ -140,10 +140,6 @@ aside {
     cursor: default;
 }
 
-.project-delete-button {
-    visibility: hidden;
-}
-
 @media (hover: hover) {
     .project-name:hover {
         color: var(--off-white-color);
@@ -156,4 +152,8 @@ aside {
     border-radius: 0.5em;
     color: var(--off-white-color);
     font-weight: 700;
+}
+
+.project-delete-button {
+    visibility: hidden;
 }
