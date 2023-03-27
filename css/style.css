@@ -107,7 +107,7 @@ aside {
 
 #submit-project-input {
     color: var(--off-white-color);
-    padding: 0.3rem 0.6rem;
+    padding: 0.3em 0.6em;
     border-radius: 50%;
     visibility: hidden;
     font-size: var(--h2-size);
@@ -140,7 +140,7 @@ aside {
     flex: 1;
     color: var(--off-white-semiopaque);
     font-size: var(--h2-size);
-    padding: 0.3rem 0.6rem;
+    padding: 0.3em 0.6em;
     margin-right: var(--small-gap);
     cursor: default;
 }
@@ -163,7 +163,7 @@ aside {
     /* visibility: hidden; */
     font-size: var(--h2-size);
     color: var(--off-white-color);
-    padding: 0.3rem 0.6rem;
+    padding: 0.3em 0.6em;
     border-radius: 50%;
 }
 
