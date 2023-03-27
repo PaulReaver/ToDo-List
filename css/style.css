@@ -160,7 +160,7 @@ aside {
 }
 
 .project-delete-button {
-    /* visibility: hidden; */
+    visibility: hidden;
     font-size: var(--h2-size);
     color: var(--off-white-color);
     padding: 0.3em 0.6em;
@@ -172,4 +172,8 @@ aside {
         color: var(--high-priority-color);
         background-color: var(--secondary-color);
     }
+}
+
+.active-project-delete-button {
+    visibility: visible;
 }
