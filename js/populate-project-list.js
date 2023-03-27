@@ -16,13 +16,28 @@ export default function populateProjectList() {
         li.append(projectName, projectDeleteButton);
         projectListUl.append(li);
         projectName.addEventListener('click', () => {
-            const previousActiveProject =
-                document.querySelector('.active-project');
-            previousActiveProject.classList.remove('active-project');
-            projectName.classList.add('active-project');
+            if (projectName.classList !== 'active-project') {
+                const previousActiveProject =
+                    document.querySelector('.active-project');
+                previousActiveProject.classList.remove('active-project');
+                projectName.classList.add('active-project');
+                const previousProjectDeleteButton = document.querySelector(
+                    '.active-project-delete-button'
+                );
+                previousProjectDeleteButton.classList.remove(
+                    'active-project-delete-button'
+                );
+                projectDeleteButton.classList.add(
+                    'active-project-delete-button'
+                );
+            }
         });
         if (i === projectList.length - 1) {
             projectName.classList.add('active-project');
+            projectDeleteButton.classList.add('active-project-delete-button');
+        }
+        if (projectName.textContent === 'General') {
+            projectDeleteButton.style.visibility = 'hidden';
         }
     }
 }
