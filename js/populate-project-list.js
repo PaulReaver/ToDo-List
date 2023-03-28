@@ -5,36 +5,27 @@ const projectListUl = document.querySelector('.project-list-ul');
 export default function populateProjectList() {
     projectListUl.replaceChildren();
     for (let i = 0; i < projectList.length; i += 1) {
-        const li = document.createElement('li');
-        li.classList.add('project-item');
+        const projectItem = document.createElement('li');
+        projectItem.classList.add('project-item');
         const projectName = document.createElement('h2');
         projectName.classList.add('project-name');
         projectName.textContent = `${projectList[i]}`;
         const projectDeleteButton = document.createElement('button');
         projectDeleteButton.classList.add('project-delete-button');
         projectDeleteButton.textContent = '🗑';
-        li.append(projectName, projectDeleteButton);
-        projectListUl.append(li);
+        projectItem.append(projectName, projectDeleteButton);
+        projectListUl.append(projectItem);
         projectName.addEventListener('click', () => {
-            if (projectName.classList !== 'active-project') {
-                const previousActiveProject =
-                    document.querySelector('.active-project');
-                previousActiveProject.classList.remove('active-project');
-                projectName.classList.add('active-project');
-                const previousProjectDeleteButton = document.querySelector(
-                    '.active-project-delete-button'
+            if (projectItem.classList !== 'active-project-item') {
+                const previousActiveProject = document.querySelector(
+                    '.active-project-item'
                 );
-                previousProjectDeleteButton.classList.remove(
-                    'active-project-delete-button'
-                );
-                projectDeleteButton.classList.add(
-                    'active-project-delete-button'
-                );
+                previousActiveProject.classList.remove('active-project-item');
+                projectItem.classList.add('active-project-item');
             }
         });
         if (i === projectList.length - 1) {
-            projectName.classList.add('active-project');
-            projectDeleteButton.classList.add('active-project-delete-button');
+            projectItem.classList.add('active-project-item');
         }
         if (projectName.textContent === 'General') {
             projectDeleteButton.style.visibility = 'hidden';
