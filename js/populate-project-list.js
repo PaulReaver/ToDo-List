@@ -1,4 +1,5 @@
 import projectList from './project-list.js';
+import applyProjectHeader from './main-header.js';
 
 const projectListUl = document.querySelector('.project-list-ul');
 
@@ -16,12 +17,13 @@ export default function populateProjectList() {
         projectItem.append(projectName, projectDeleteButton);
         projectListUl.append(projectItem);
         projectName.addEventListener('click', () => {
-            if (projectItem.classList !== 'active-project-item') {
+            if (!projectItem.classList.contains('active-project-item')) {
                 const previousActiveProject = document.querySelector(
                     '.active-project-item'
                 );
                 previousActiveProject.classList.remove('active-project-item');
                 projectItem.classList.add('active-project-item');
+                applyProjectHeader();
             }
         });
         projectDeleteButton.addEventListener('click', () => {
@@ -35,4 +37,5 @@ export default function populateProjectList() {
             projectDeleteButton.style.visibility = 'hidden';
         }
     }
+    applyProjectHeader();
 }
