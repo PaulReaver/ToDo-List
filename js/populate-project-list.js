@@ -24,6 +24,10 @@ export default function populateProjectList() {
                 projectItem.classList.add('active-project-item');
             }
         });
+        projectDeleteButton.addEventListener('click', () => {
+            projectList.splice(i, 1);
+            populateProjectList();
+        });
         if (i === projectList.length - 1) {
             projectItem.classList.add('active-project-item');
         }
