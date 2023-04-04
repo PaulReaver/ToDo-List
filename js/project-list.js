@@ -1,7 +1,7 @@
 const projectList = ['General'];
 
 export function addProject() {
-    const newProject = document.getElementById('add-project-input').value;
+    const newProject = document.getElementById('ADD-PROJECT__Input').value;
     projectList.push(newProject);
 }
 

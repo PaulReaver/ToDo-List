@@ -89,18 +89,18 @@ aside {
     align-items: center;
 }
 
-#add-project-input::placeholder {
+#ADD-PROJECT__Input::placeholder {
     color: var(--color-white-semiopaque);
 }
 
-#add-project-input {
+#ADD-PROJECT__Input {
     color: var(--color-white);
     border: 1px solid var(--color-secondary);
     border-radius: var(--border-radius);
     padding: 0.3em 0.6em;
 }
 
-#add-project-input:focus-visible {
+#ADD-PROJECT__Input:focus-visible {
     background-color: var(--color-secondary);
 }
 
@@ -121,7 +121,7 @@ aside {
     }
 }
 
-#add-project-input:not(:placeholder-shown) + #submit-project-input {
+#ADD-PROJECT__Input:not(:placeholder-shown) + #submit-project-input {
     visibility: visible;
 }
 
