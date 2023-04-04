@@ -83,7 +83,7 @@ aside {
     padding-right: var(--gap-large);
 }
 
-.add-project-form {
+.ADD-PROJECT {
     display: flex;
     justify-content: space-between;
     align-items: center;
