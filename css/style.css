@@ -57,22 +57,22 @@ body {
     min-height: 100vh;
 }
 
-.wrapper {
+.WRAPPER {
     margin: 0 3rem;
 }
 
-header {
+.HEADER {
     border-bottom: 2px solid var(--color-secondary);
 }
 
-header h1 {
+.HEADER__Title {
     font-size: var(--font-h1);
     color: var(--color-white);
     font-weight: 700;
     margin: var(--gap-large) 0;
 }
 
-.content {
+.CONTENT {
     margin-top: var(--gap-large);
     display: flex;
 }
