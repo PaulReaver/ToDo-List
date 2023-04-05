@@ -8,9 +8,6 @@
     --color-orange: #ffa500;
     --color-red: #ff0000;
 
-    /* Font application */
-    font-family: 'Hanken Grotesk', sans-serif;
-
     /* Font sizes */
     --font-h1: 2rem;
     --font-h2: 1.5rem;
@@ -50,31 +47,17 @@
     src: url('../fonts/hanken-grotesk-v5-latin-700.woff2') format('woff2');
 }
 
+/* Global styles */
 body {
     background-color: var(--color-primary);
+    font-family: 'Hanken Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.WRAPPER {
-    margin: 0 3rem;
-}
-
-.HEADER {
+header {
     border-bottom: 2px solid var(--color-secondary);
-}
-
-.HEADER__Title {
-    font-size: var(--font-h1);
-    color: var(--color-white);
-    font-weight: 700;
-    margin: var(--gap-large) 0;
-}
-
-.CONTENT {
-    margin-top: var(--gap-large);
-    display: flex;
 }
 
 aside {
@@ -83,50 +66,77 @@ aside {
     padding-right: var(--gap-large);
 }
 
+nav {
+    margin-top: var(--gap-large);
+}
+
+h1 {
+    font-size: var(--font-h1);
+    color: var(--color-white);
+    font-weight: 700;
+    margin: var(--gap-large) 0;
+}
+
+h2 {
+    font-size: var(--font-h2);
+    color: var(--color-white-semiopaque);
+}
+
+input[type='text'] {
+    color: var(--color-white);
+}
+
+input[type='text']::placeholder {
+    color: var(--color-white-semiopaque);
+}
+
+input[type='text']:focus-visible {
+    background-color: var(--color-secondary);
+}
+
+input[type='submit'],
+button {
+    color: var(--color-white);
+    padding: 0.3em 0.6em;
+    border-radius: 50%;
+    font-size: var(--font-h2);
+}
+
+@media (hover: hover) {
+    input[type='submit']:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-green);
+    }
+}
+
+#ADD-PROJECT__Submit,
+.project-delete-button {
+    visibility: hidden;
+}
+
+.WRAPPER {
+    margin: 0 3rem;
+}
+
+.CONTENT {
+    margin-top: var(--gap-large);
+    display: flex;
+}
+
 .ADD-PROJECT {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#ADD-PROJECT__Input::placeholder {
-    color: var(--color-white-semiopaque);
-}
-
 #ADD-PROJECT__Input {
-    color: var(--color-white);
     border: 1px solid var(--color-secondary);
     border-radius: var(--border-radius);
     padding: 0.3em 0.6em;
 }
 
-#ADD-PROJECT__Input:focus-visible {
-    background-color: var(--color-secondary);
-}
-
-#submit-project-input,
-.project-delete-button {
-    color: var(--color-white);
-    padding: 0.3em 0.6em;
-    border-radius: 50%;
-    visibility: hidden;
-    font-size: var(--font-h2);
-}
-
-@media (hover: hover) {
-    #submit-project-input:hover {
-        background-color: var(--color-secondary);
-
-        color: var(--color-green);
-    }
-}
-
-#ADD-PROJECT__Input:not(:placeholder-shown) + #submit-project-input {
+#ADD-PROJECT__Input:not(:placeholder-shown) + #ADD-PROJECT__Submit {
     visibility: visible;
-}
-
-.project-list-nav {
-    margin-top: var(--gap-large);
 }
 
 .project-item {
@@ -138,8 +148,6 @@ aside {
 
 .project-name {
     flex: 1;
-    color: var(--color-white-semiopaque);
-    font-size: var(--font-h2);
     padding: 0.3em 0.6em;
     margin-right: var(--gap-small);
     cursor: default;

@@ -1,7 +1,7 @@
 import projectList from './project-list.js';
 import applyProjectHeader from './main-header.js';
 
-const projectListUl = document.querySelector('.project-list-ul');
+const projectListUl = document.querySelector('.PROJECTS');
 
 export default function populateProjectList() {
     projectListUl.replaceChildren();
