@@ -56,10 +56,6 @@ body {
     min-height: 100vh;
 }
 
-header {
-    border-bottom: 2px solid var(--color-secondary);
-}
-
 aside {
     width: 300px;
     border-right: 2px solid var(--color-secondary);
@@ -72,6 +68,7 @@ nav {
 
 main {
     margin-left: var(--gap-large);
+    flex: 1;
 }
 
 h1 {
@@ -116,6 +113,10 @@ button {
 /* Specific styles */
 .WRAPPER {
     margin: 0 3rem;
+}
+
+.WRAPPER__Header {
+    border-bottom: 2px solid var(--color-secondary);
 }
 
 .CONTENT {
@@ -184,6 +185,12 @@ button {
 }
 
 .MAIN__Header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.MAIN__Header-Title {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--color-white);
