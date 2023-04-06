@@ -1,5 +1,7 @@
+const mainHeader = document.querySelector('.MAIN__Header');
+
 export default function applyProjectHeader() {
-    const activeProject =
+    const activeProjectName =
         document.querySelector('.PROJECT--active').firstChild.textContent;
-    console.log(activeProject);
+    mainHeader.textContent = activeProjectName;
 }
