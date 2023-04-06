@@ -109,11 +109,7 @@ button {
     }
 }
 
-#ADD-PROJECT__Submit,
-.PROJECT__Delete {
-    visibility: hidden;
-}
-
+/* Specific styles */
 .WRAPPER {
     margin: 0 3rem;
 }
@@ -137,6 +133,11 @@ button {
 
 #ADD-PROJECT__Input:not(:placeholder-shown) + #ADD-PROJECT__Submit {
     visibility: visible;
+}
+
+#ADD-PROJECT__Submit,
+.PROJECT__Delete {
+    visibility: hidden;
 }
 
 .PROJECT {
