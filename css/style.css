@@ -70,6 +70,10 @@ nav {
     margin-top: var(--gap-large);
 }
 
+main {
+    margin-left: var(--gap-large);
+}
+
 h1 {
     font-size: var(--font-h1);
     color: var(--color-white);
@@ -177,4 +181,10 @@ button {
 
 .PROJECT--active > .PROJECT__Delete {
     visibility: visible;
+}
+
+.MAIN__Header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
 }
