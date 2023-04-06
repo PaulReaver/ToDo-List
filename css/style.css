@@ -110,7 +110,7 @@ button {
 }
 
 #ADD-PROJECT__Submit,
-.project-delete-button {
+.PROJECT__Delete {
     visibility: hidden;
 }
 
@@ -139,14 +139,14 @@ button {
     visibility: visible;
 }
 
-.project-item {
+.PROJECT {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--gap-small);
 }
 
-.project-name {
+.PROJECT__Name {
     flex: 1;
     padding: 0.3em 0.6em;
     margin-right: var(--gap-small);
@@ -154,13 +154,13 @@ button {
 }
 
 @media (hover: hover) {
-    .project-name:hover {
+    .PROJECT__Name:hover {
         color: var(--color-white);
         font-weight: 700;
     }
 }
 
-.active-project-item > .project-name {
+.PROJECT--active > .PROJECT__Name {
     background-color: var(--color-secondary);
     border-radius: var(--border-radius);
     color: var(--color-white);
@@ -168,12 +168,12 @@ button {
 }
 
 @media (hover: hover) {
-    .project-delete-button:hover {
+    .PROJECT__Delete:hover {
         color: var(--color-red);
         background-color: var(--color-secondary);
     }
 }
 
-.active-project-item > .project-delete-button {
+.PROJECT--active > .PROJECT__Delete {
     visibility: visible;
 }

@@ -1,5 +1,5 @@
 export default function applyProjectHeader() {
-    const activeProject = document.querySelector('.active-project-item')
-        .firstChild.textContent;
+    const activeProject =
+        document.querySelector('.PROJECT--active').firstChild.textContent;
     console.log(activeProject);
 }
