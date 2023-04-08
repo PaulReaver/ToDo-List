@@ -1,4 +1,4 @@
-const mainHeader = document.querySelector('.MAIN__Header-Title');
+const mainHeader = document.querySelector('.MAIN__Project-Name');
 
 export default function applyProjectHeader() {
     const activeProjectName =
