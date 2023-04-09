@@ -47,13 +47,26 @@
     src: url('../fonts/hanken-grotesk-v5-latin-700.woff2') format('woff2');
 }
 
-/* Global styles */
+/* Layout */
 body {
     background-color: var(--color-primary);
     font-family: 'Hanken Grotesk', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.WRAPPER {
+    margin: 0 3rem;
+}
+
+.WRAPPER__Header {
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.CONTENT {
+    margin-top: var(--gap-large);
+    display: flex;
 }
 
 aside {
@@ -71,6 +84,14 @@ main {
     flex: 1;
 }
 
+.MAIN__Header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+/* Components */
+
 h1 {
     font-size: var(--font-h1);
     color: var(--color-white);
@@ -81,6 +102,12 @@ h1 {
 h2 {
     font-size: var(--font-h2);
     color: var(--color-white-semiopaque);
+}
+
+.MAIN__Project-Name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
 }
 
 input[type='text'] {
@@ -110,20 +137,7 @@ button {
     }
 }
 
-/* Specific styles */
-.WRAPPER {
-    margin: 0 3rem;
-}
-
-.WRAPPER__Header {
-    border-bottom: 2px solid var(--color-secondary);
-}
-
-.CONTENT {
-    margin-top: var(--gap-large);
-    display: flex;
-}
-
+/* Blocks */
 .ADD-PROJECT {
     display: flex;
     justify-content: space-between;
@@ -182,16 +196,4 @@ button {
 
 .PROJECT--active > .PROJECT__Delete {
     visibility: visible;
-}
-
-.MAIN__Header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-}
-
-.MAIN__Project-Name {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-white);
 }
