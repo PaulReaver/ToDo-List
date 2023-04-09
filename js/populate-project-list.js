@@ -1,7 +1,7 @@
 import projectList from './project-list.js';
-import applyProjectHeader from './main-header.js';
+import applyNotesCategory from './notes-category.js';
 
-const projectListUl = document.querySelector('.PROJECT-LIST');
+const projectListUl = document.querySelector('#project-list');
 
 export default function populateProjectList() {
     projectListUl.replaceChildren();
@@ -22,7 +22,7 @@ export default function populateProjectList() {
                     document.querySelector('.PROJECT--active');
                 previousActiveProject.classList.remove('PROJECT--active');
                 projectItem.classList.add('PROJECT--active');
-                applyProjectHeader();
+                applyNotesCategory();
             }
         });
         projectDeleteButton.addEventListener('click', () => {
@@ -36,5 +36,5 @@ export default function populateProjectList() {
             projectDeleteButton.style.visibility = 'hidden';
         }
     }
-    applyProjectHeader();
+    applyNotesCategory();
 }
