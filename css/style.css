@@ -1,3 +1,4 @@
+/* Variables declaration */
 :root {
     /* Color variables */
     --color-primary: #0d1117;
@@ -20,6 +21,7 @@
     --border-radius: 0.5em;
 }
 
+/* Font declarations */
 /* hanken-grotesk-regular - latin */
 @font-face {
     font-display: swap;
@@ -47,7 +49,7 @@
     src: url('../fonts/hanken-grotesk-v5-latin-700.woff2') format('woff2');
 }
 
-/* Layout */
+/* Layout elements */
 body {
     background-color: var(--color-primary);
     font-family: 'Hanken Grotesk', sans-serif;
@@ -56,15 +58,15 @@ body {
     min-height: 100vh;
 }
 
-.WRAPPER {
+#wrapper {
     margin: 0 3rem;
 }
 
-.WRAPPER__Header {
+#primary-header {
     border-bottom: 2px solid var(--color-secondary);
 }
 
-.CONTENT {
+#content {
     margin-top: var(--gap-large);
     display: flex;
 }
@@ -84,14 +86,13 @@ main {
     flex: 1;
 }
 
-.MAIN__Header {
+#notes-header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 }
 
-/* Components */
-
+/*Individual Components/Exceptions */
 h1 {
     font-size: var(--font-h1);
     color: var(--color-white);
@@ -104,7 +105,7 @@ h2 {
     color: var(--color-white-semiopaque);
 }
 
-.MAIN__Project-Name {
+h2[data-attribute='notes-category'] {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--color-white);
@@ -137,24 +138,24 @@ button {
     }
 }
 
-/* Blocks */
-.ADD-PROJECT {
+/* Custom Blocks */
+.add-project {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#ADD-PROJECT__Input {
+#add-project__input {
     border: 1px solid var(--color-secondary);
     border-radius: var(--border-radius);
     padding: 0.3em 0.6em;
 }
 
-#ADD-PROJECT__Input:not(:placeholder-shown) + #ADD-PROJECT__Submit {
+#add-project__input:not(:placeholder-shown) + #add-project__submit {
     visibility: visible;
 }
 
-#ADD-PROJECT__Submit,
+#add-project__submit,
 .PROJECT__Delete {
     visibility: hidden;
 }
