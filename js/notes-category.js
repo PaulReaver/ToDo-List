@@ -1,9 +1,7 @@
-const notesCategory = document.querySelector(
-    '[data-attribute="notes-category"]'
-);
+const notesCategory = document.querySelector('h2.notes-category');
 
 export default function applyNotesCategory() {
     const activeProjectName =
-        document.querySelector('.PROJECT--active').firstChild.textContent;
+        document.querySelector('.project--active').firstChild.textContent;
     notesCategory.textContent = activeProjectName;
 }
