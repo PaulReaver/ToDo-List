@@ -9,34 +9,34 @@
         <script src="./js/main.js" type="module"></script>
     </head>
     <body>
-        <div class="WRAPPER">
-            <header class="WRAPPER__Header">
+        <div id="wrapper">
+            <header id="primary-header">
                 <h1>ToDo List</h1>
             </header>
-            <div class="CONTENT">
+            <div id="content">
                 <aside>
-                    <form class="ADD-PROJECT">
+                    <form class="add-project">
                         <input
                             type="text"
-                            name="ADD-PROJECT__Input"
-                            id="ADD-PROJECT__Input"
+                            name="add-project__input"
+                            id="add-project__input"
                             placeholder="Add a project..."
                             maxlength="15"
                         />
                         <input
-                            name="ADD-PROJECT__Submit"
+                            name="add-project__submit"
                             type="submit"
                             value="&check;"
-                            id="ADD-PROJECT__Submit"
+                            id="add-project__submit"
                         />
                     </form>
                     <nav>
-                        <ul class="PROJECT-LIST"></ul>
+                        <ul id="project-list"></ul>
                     </nav>
                 </aside>
                 <main>
-                    <header class="MAIN__Header">
-                        <h2 class="MAIN__Project-Name"></h2>
+                    <header id="notes-header">
+                        <h2 data-attribute="notes-category"></h2>
                         <h2>NIIIICE</h2>
                     </header>
                 </main>
