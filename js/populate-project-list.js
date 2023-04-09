@@ -9,7 +9,7 @@ export default function populateProjectList() {
         const projectItem = document.createElement('li');
         projectItem.classList.add('project');
         const projectName = document.createElement('h2');
-        projectName.classList.add('PROJECT__Name');
+        projectName.classList.add('project__name');
         projectName.textContent = `${projectList[i]}`;
         const projectDeleteButton = document.createElement('button');
         projectDeleteButton.classList.add('PROJECT__Delete');

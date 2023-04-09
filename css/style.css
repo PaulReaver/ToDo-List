@@ -167,7 +167,7 @@ button {
     margin-bottom: var(--gap-small);
 }
 
-.PROJECT__Name {
+.project__name {
     flex: 1;
     padding: 0.3em 0.6em;
     margin-right: var(--gap-small);
@@ -175,13 +175,13 @@ button {
 }
 
 @media (hover: hover) {
-    .PROJECT__Name:hover {
+    .project__name:hover {
         color: var(--color-white);
         font-weight: 700;
     }
 }
 
-.PROJECT--active > .PROJECT__Name {
+.PROJECT--active > .project__name {
     background-color: var(--color-secondary);
     border-radius: var(--border-radius);
     color: var(--color-white);
