@@ -12,6 +12,7 @@
     /* Font sizes */
     --font-h1: 2rem;
     --font-h2: 1.5rem;
+    --font-h3: 1.17rem;
 
     /* Paddings/Margins */
     --gap-large: 2rem;
@@ -89,7 +90,6 @@ main {
 #notes-header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
 }
 
 /* Base elements*/
@@ -111,15 +111,24 @@ h2.notes-category {
     color: var(--color-white);
 }
 
+h3 {
+    font-size: var(--font-h3);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
 input[type='text'] {
     color: var(--color-white);
 }
 
-input[type='text']::placeholder {
+input[type='text']::placeholder,
+textarea,
+textarea::placeholder {
     color: var(--color-white-semiopaque);
 }
 
-input[type='text']:focus-visible {
+input[type='text']:focus-visible,
+textarea:focus-visible {
     background-color: var(--color-secondary);
 }
 
@@ -197,4 +206,26 @@ button {
 
 .project--active > .project__delete {
     visibility: visible;
+}
+
+.add-note {
+    width: 400px;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+#add-note__title {
+    font-size: var(--font-h3);
+    font-weight: 700;
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+}
+
+#add-note__description {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.3rem 0.6rem;
+    word-wrap: break-word;
 }
