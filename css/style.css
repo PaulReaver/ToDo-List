@@ -13,6 +13,7 @@
     --font-h1: 2rem;
     --font-h2: 1.5rem;
     --font-h3: 1.17rem;
+    --font-h4: 1rem;
 
     /* Paddings/Margins */
     --gap-large: 2rem;
@@ -147,6 +148,46 @@ button {
     }
 }
 
+label {
+    font-size: var(--font-h4);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+select {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+select[data-chosen='low'] {
+    color: var(--color-green);
+}
+
+select[data-chosen='medium'] {
+    color: var(--color-orange);
+}
+
+select[data-chosen='high'] {
+    color: var(--color-red);
+}
+
+option {
+    background-color: var(--color-primary);
+}
+
+option:nth-child(1) {
+    color: var(--color-green);
+}
+
+option:nth-child(2) {
+    color: var(--color-orange);
+}
+
+option:nth-child(3) {
+    color: var(--color-red);
+}
+
 /* Custom Blocks and Contents */
 .add-project {
     display: flex;
@@ -228,4 +269,8 @@ button {
     width: 100%;
     padding: 0.3rem 0.6rem;
     word-wrap: break-word;
+}
+
+.add-note__bottom-section {
+    padding: 0.3rem 0.6rem;
 }
