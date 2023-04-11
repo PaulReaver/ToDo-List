@@ -51,9 +51,13 @@
                                 style="resize: none"
                             ></textarea>
                             <div class="add-note__bottom-section">
-                                <label for="add-note__priority"
+                                <label
+                                    class="add-note__priority-label"
+                                    for="add-note__priority"
                                     >Priority:
                                     <select
+                                        data-chosen="low"
+                                        onchange="this.dataset.chosen = this.value;"
                                         name="add-note__priority"
                                         id="add-note__priority"
                                     >
