@@ -131,6 +131,7 @@ textarea::placeholder {
 input[type='text']:focus-visible,
 textarea:focus-visible {
     background-color: var(--color-secondary);
+    color: var(--color-white);
 }
 
 input[type='submit'],
@@ -152,12 +153,21 @@ label {
     font-size: var(--font-h4);
     color: var(--color-white);
     font-weight: 700;
+    cursor: default;
 }
 
 select {
     font-size: 1rem;
     font-weight: 400;
     font-style: italic;
+    appearance: auto;
+    padding: 0.3em 0.6em;
+    border-radius: var(--border-radius);
+    vertical-align: middle;
+}
+
+select:focus-visible {
+    background-color: var(--color-secondary);
 }
 
 select[data-chosen='low'] {
@@ -250,7 +260,7 @@ option:nth-child(3) {
 }
 
 .add-note {
-    width: 400px;
+    width: 600px;
     border: 1px solid var(--color-secondary);
     border-radius: var(--border-radius);
     overflow: hidden;
