@@ -142,13 +142,6 @@ button {
     font-size: var(--font-h2);
 }
 
-@media (hover: hover) {
-    input[type='submit']:hover {
-        background-color: var(--color-secondary);
-        color: var(--color-green);
-    }
-}
-
 label {
     font-size: var(--font-h4);
     color: var(--color-white);
@@ -198,6 +191,31 @@ option:nth-child(3) {
     color: var(--color-red);
 }
 
+input[type='date'] {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-white);
+    cursor: text;
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+    color-scheme: dark;
+    padding: 0.6em;
+    border-radius: 50%;
+}
+
+@media (hover: hover) {
+    input[type='submit']:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-green);
+    }
+    select:hover,
+    input[type='date']::-webkit-calendar-picker-indicator:hover {
+        background-color: var(--color-secondary);
+    }
+}
+
 /* Custom Blocks and Contents */
 .add-project {
     display: flex;
@@ -234,25 +252,11 @@ option:nth-child(3) {
     cursor: default;
 }
 
-@media (hover: hover) {
-    .project__name:hover {
-        color: var(--color-white);
-        font-weight: 700;
-    }
-}
-
 .project--active > .project__name {
     background-color: var(--color-secondary);
     border-radius: var(--border-radius);
     color: var(--color-white);
     font-weight: 700;
-}
-
-@media (hover: hover) {
-    .project__delete:hover {
-        color: var(--color-red);
-        background-color: var(--color-secondary);
-    }
 }
 
 .project--active > .project__delete {
@@ -283,4 +287,15 @@ option:nth-child(3) {
 
 .add-note__bottom-section {
     padding: 0.3rem 0.6rem;
+}
+
+@media (hover: hover) {
+    .project__name:hover {
+        color: var(--color-white);
+        font-weight: 700;
+    }
+    .project__delete:hover {
+        color: var(--color-red);
+        background-color: var(--color-secondary);
+    }
 }
