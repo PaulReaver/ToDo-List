@@ -51,7 +51,7 @@
     src: url('../fonts/hanken-grotesk-v5-latin-700.woff2') format('woff2');
 }
 
-/* Layout elements*/
+/* Layout */
 body {
     background-color: var(--color-primary);
     font-family: 'Hanken Grotesk', sans-serif;
@@ -93,7 +93,12 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-/* Base elements*/
+/* Base*/
+::selection {
+    color: var(--color-secondary);
+    background-color: var(--color-white);
+}
+
 h1 {
     font-size: var(--font-h1);
     color: var(--color-white);
@@ -215,7 +220,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
     }
 }
 
-/* Custom Blocks and Contents */
+/* Custom */
 .add-project {
     display: flex;
     justify-content: space-between;
@@ -286,6 +291,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .add-note__bottom-section {
     padding: 0.3rem 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 @media (hover: hover) {
