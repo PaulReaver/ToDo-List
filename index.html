@@ -60,7 +60,9 @@
                                         name="add-note__priority"
                                         id="add-note__priority"
                                     >
-                                        <option value="low">Low</option>
+                                        <option value="low" selected>
+                                            Low
+                                        </option>
                                         <option value="medium">Medium</option>
                                         <option value="high">High</option>
                                     </select>
@@ -75,6 +77,20 @@
                                         name="add-note__date"
                                         id="add-note__date"
                                 /></label>
+                            </div>
+                            <div class="add-note__handles">
+                                <input
+                                    name="add-note__reset"
+                                    type="reset"
+                                    value="&#10005;"
+                                    id="add-note__reset"
+                                />
+                                <input
+                                    name="add-note__submit"
+                                    type="submit"
+                                    value="&check;"
+                                    id="add-note__submit"
+                                />
                             </div>
                         </form>
                     </header>
