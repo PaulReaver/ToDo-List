@@ -125,12 +125,14 @@ h3 {
 
 input[type='text'] {
     color: var(--color-white);
+    line-height: calc(1em + 0.5rem);
 }
 
 input[type='text']::placeholder,
 textarea,
 textarea::placeholder {
     color: var(--color-white-semiopaque);
+    line-height: calc(1em + 0.5rem);
 }
 
 input[type='text']:focus-visible,
