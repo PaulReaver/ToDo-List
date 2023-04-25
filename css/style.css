@@ -142,6 +142,7 @@ textarea:focus-visible {
 }
 
 input[type='submit'],
+input[type='reset'],
 button {
     color: var(--color-white);
     padding: 0.3em 0.6em;
@@ -215,6 +216,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
     input[type='submit']:hover {
         background-color: var(--color-secondary);
         color: var(--color-green);
+    }
+    input[type='reset']:hover {
+        background-color: var(--color-secondary);
+        color: var(--color-red);
     }
     select:hover,
     input[type='date']::-webkit-calendar-picker-indicator:hover {
@@ -296,6 +301,14 @@ input[type='date']::-webkit-calendar-picker-indicator {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.add-note__handles {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: var(--gap-small);
+    border-top: 1px solid var(--color-secondary);
 }
 
 @media (hover: hover) {
