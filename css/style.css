@@ -208,8 +208,7 @@ input[type='date'] {
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
-    padding: 0.6em;
-    border-radius: 50%;
+    display: none;
 }
 
 @media (hover: hover) {
@@ -220,10 +219,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
     input[type='reset']:hover {
         background-color: var(--color-secondary);
         color: var(--color-red);
-    }
-    select:hover,
-    input[type='date']::-webkit-calendar-picker-indicator:hover {
-        background-color: var(--color-secondary);
     }
 }
 
@@ -302,9 +297,9 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .add-note__bottom-section {
-    padding: 0rem 0.6rem;
+    padding: 0.3rem 0.6rem;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
 }
 
