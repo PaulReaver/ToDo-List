@@ -1,3 +1,4 @@
+import populateTasks from './populate-tasks';
 import projectList from './project-list';
 
 class Note {
@@ -23,6 +24,7 @@ export default function addNote() {
     for (let i = 0; i < projectList.length; i += 1) {
         if (activeProject === projectList[i].name) {
             projectList[i].tasks.push(note);
+            populateTasks();
             return;
         }
     }
