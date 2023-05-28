@@ -1,5 +1,6 @@
 import projectList from './project-list.js';
 import applyNotesCategory from './notes-category.js';
+import populateTasks from './populate-tasks.js';
 
 const projectListUl = document.querySelector('#project-list');
 
@@ -23,6 +24,7 @@ export default function populateProjectList() {
                 previousActiveProject.classList.remove('project--active');
                 projectItem.classList.add('project--active');
                 applyNotesCategory();
+                populateTasks();
             }
         });
         projectDeleteButton.addEventListener('click', () => {
@@ -31,6 +33,7 @@ export default function populateProjectList() {
         });
         if (i === projectList.length - 1) {
             projectItem.classList.add('project--active');
+            populateTasks();
         }
         if (projectName.textContent === 'General') {
             projectDeleteButton.style.visibility = 'hidden';
