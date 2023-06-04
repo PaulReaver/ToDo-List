@@ -171,15 +171,15 @@ select:focus-visible {
     background-color: var(--color-secondary);
 }
 
-select[data-chosen='low'] {
+select[data-chosen='Low'] {
     color: var(--color-green);
 }
 
-select[data-chosen='medium'] {
+select[data-chosen='Medium'] {
     color: var(--color-orange);
 }
 
-select[data-chosen='high'] {
+select[data-chosen='High'] {
     color: var(--color-red);
 }
 
@@ -281,14 +281,16 @@ input[type='date']::-webkit-calendar-picker-indicator {
     height: fit-content;
 }
 
-#add-note__title {
+#add-note__title,
+.note__title {
     font-size: var(--font-h3);
     font-weight: 700;
     width: 100%;
     padding: 0.3rem 0.6rem;
 }
 
-#add-note__description {
+#add-note__description,
+.note__description {
     display: block;
     font-size: 1rem;
     width: 100%;
@@ -310,6 +312,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
     justify-content: center;
     gap: var(--gap-small);
     margin: 0.3rem 0;
+}
+
+.note {
+    width: 500px;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--border-radius);
 }
 
 @media (hover: hover) {
