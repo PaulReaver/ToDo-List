@@ -56,11 +56,11 @@ export default function populateTasks() {
                 option3.text = 'High';
 
                 notePriority.append(option1, option2, option3);
-                if (projectList[i].tasks[j].priority === 'low') {
+                if (projectList[i].tasks[j].priority === 'Low') {
                     notePriority.selectedIndex = '0';
-                } else if (projectList[i].tasks[j].priority === 'medium') {
+                } else if (projectList[i].tasks[j].priority === 'Medium') {
                     notePriority.selectedIndex = '1';
-                } else if (projectList[i].tasks[j].priority === 'high') {
+                } else if (projectList[i].tasks[j].priority === 'High') {
                     notePriority.selectedIndex = '2';
                 }
 
