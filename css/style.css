@@ -298,7 +298,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
     word-wrap: break-word;
 }
 
-.add-note__bottom-section {
+.add-note__bottom-section,
+.note__bottom-section {
     padding: 0.3rem 0.6rem;
     display: flex;
     align-items: center;
