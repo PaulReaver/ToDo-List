@@ -64,8 +64,21 @@ export default function populateTasks() {
                     notePriority.selectedIndex = '2';
                 }
 
+                // create date label
+                const dateLabel = document.createElement('label');
+                dateLabel.setAttribute('for', 'note__date');
+                dateLabel.textContent = 'Due Date';
+
+                // create date selection
+                const noteDate = document.createElement('input');
+                noteDate.setAttribute('type', 'date');
+                noteDate.setAttribute('name', 'note__date');
+                noteDate.classList.add('note__date');
+                noteDate.value = projectList[i].tasks[j].date;
+
                 priorityLabel.append(notePriority);
-                bottomSection.append(priorityLabel);
+                dateLabel.append(noteDate);
+                bottomSection.append(priorityLabel, dateLabel);
                 note.append(noteTitle, noteDescription, bottomSection);
                 notesTasks.append(note);
             }
