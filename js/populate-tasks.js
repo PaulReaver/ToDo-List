@@ -34,7 +34,7 @@ export default function populateTasks() {
                 // create priority label
                 const priorityLabel = document.createElement('label');
                 priorityLabel.setAttribute('for', 'note__priority');
-                priorityLabel.textContent = 'Priority';
+                priorityLabel.textContent = 'Priority: ';
 
                 // create priority selection
                 const notePriority = document.createElement('select');
@@ -67,7 +67,7 @@ export default function populateTasks() {
                 // create date label
                 const dateLabel = document.createElement('label');
                 dateLabel.setAttribute('for', 'note__date');
-                dateLabel.textContent = 'Due Date';
+                dateLabel.textContent = 'Due Date: ';
 
                 // create date selection
                 const noteDate = document.createElement('input');
