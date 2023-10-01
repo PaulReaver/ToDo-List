@@ -31,6 +31,7 @@ addNoteForm.addEventListener('submit', (e) => {
     e.preventDefault();
     addNote();
     addNoteForm.reset();
+    document.activeElement.blur();
 });
 
 populateProjectList();
