@@ -1,4 +1,5 @@
 import projectList from './project-list';
+import autoResizeDescription from './auto-resize-description';
 
 const notesTasks = document.querySelector('#notes-tasks');
 
@@ -26,6 +27,10 @@ export default function populateTasks() {
                 const noteDescription = document.createElement('textarea');
                 noteDescription.classList.add('note__description');
                 noteDescription.value = projectList[i].tasks[j].description;
+                noteDescription.addEventListener(
+                    'input',
+                    autoResizeDescription
+                );
 
                 // create bottom section
                 const bottomSection = document.createElement('div');
