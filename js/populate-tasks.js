@@ -22,6 +22,11 @@ export default function populateTasks() {
                 noteTitle.setAttribute('type', 'text');
                 noteTitle.classList.add('note__title');
                 noteTitle.value = projectList[i].tasks[j].title;
+                noteTitle.onblur = () => {
+                    if (projectList[i].tasks[j].title !== noteTitle.value) {
+                        projectList[i].tasks[j].title = noteTitle.value;
+                    }
+                };
 
                 // create description
                 const noteDescription = document.createElement('textarea');
@@ -31,6 +36,15 @@ export default function populateTasks() {
                     'input',
                     autoResizeDescription
                 );
+                noteDescription.onblur = () => {
+                    if (
+                        projectList[i].tasks[j].description !==
+                        noteDescription.value
+                    ) {
+                        projectList[i].tasks[j].description =
+                            noteDescription.value;
+                    }
+                };
 
                 // create bottom section
                 const bottomSection = document.createElement('div');
@@ -69,6 +83,14 @@ export default function populateTasks() {
                     notePriority.selectedIndex = '2';
                 }
 
+                notePriority.onblur = () => {
+                    if (
+                        projectList[i].tasks[j].priority !== notePriority.value
+                    ) {
+                        projectList[i].tasks[j].priority = notePriority.value;
+                    }
+                };
+
                 // create date label
                 const dateLabel = document.createElement('label');
                 dateLabel.setAttribute('for', 'note__date');
@@ -86,6 +108,12 @@ export default function populateTasks() {
                 bottomSection.append(priorityLabel, dateLabel);
                 note.append(noteTitle, noteDescription, bottomSection);
                 notesTasks.append(note);
+
+                noteDate.onblur = () => {
+                    if (projectList[i].tasks[j].date !== noteDate.value) {
+                        projectList[i].tasks[j].date = noteDate.value;
+                    }
+                };
             }
 
             return;
