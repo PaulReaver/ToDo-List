@@ -103,17 +103,32 @@ export default function populateTasks() {
                 noteDate.classList.add('note__date');
                 noteDate.value = projectList[i].tasks[j].date;
 
-                priorityLabel.append(notePriority);
-                dateLabel.append(noteDate);
-                bottomSection.append(priorityLabel, dateLabel);
-                note.append(noteTitle, noteDescription, bottomSection);
-                notesTasks.append(note);
-
                 noteDate.onblur = () => {
                     if (projectList[i].tasks[j].date !== noteDate.value) {
                         projectList[i].tasks[j].date = noteDate.value;
                     }
                 };
+
+                // create delete note button
+                const noteDeleteButton = document.createElement('button');
+                noteDeleteButton.classList.add('note__delete');
+                noteDeleteButton.textContent = '🗑';
+                noteDeleteButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    projectList[i].tasks.splice(j, 1);
+                    populateTasks();
+                });
+
+                priorityLabel.append(notePriority);
+                dateLabel.append(noteDate);
+                bottomSection.append(priorityLabel, dateLabel);
+                note.append(
+                    noteTitle,
+                    noteDescription,
+                    bottomSection,
+                    noteDeleteButton
+                );
+                notesTasks.append(note);
             }
 
             return;
