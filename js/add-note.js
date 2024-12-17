@@ -15,8 +15,10 @@ export default function addNote() {
         '.project--active > .project__name'
     ).textContent;
 
-    const title = document.getElementById('add-note__title').value;
-    const description = document.getElementById('add-note__description').value;
+    const title = document.getElementById('add-note__title').value.trim();
+    const description = document
+        .getElementById('add-note__description')
+        .value.trim();
     const priority = document.getElementById('add-note__priority').value;
     const date = document.getElementById('add-note__date').value;
 
