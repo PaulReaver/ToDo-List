@@ -315,6 +315,13 @@ input[type='date']::-webkit-calendar-picker-indicator {
     margin: 0.3rem 0;
 }
 
+.note__handles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3rem 0;
+}
+
 .note {
     width: 500px;
     border: 1px solid var(--color-secondary);
@@ -326,7 +333,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
         color: var(--color-white);
         font-weight: 700;
     }
-    .project__delete:hover {
+    .project__delete:hover,
+    .note__delete:hover {
         color: var(--color-red);
         background-color: var(--color-secondary);
     }
