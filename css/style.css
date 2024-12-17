@@ -315,11 +315,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
     margin: 0.3rem 0;
 }
 
-.note__handles {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.3rem 0;
+#notes-tasks {
+    margin-top: var(--gap-large);
 }
 
 .note {
@@ -328,6 +325,12 @@ input[type='date']::-webkit-calendar-picker-indicator {
     border-radius: var(--border-radius);
 }
 
+.note__handles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.3rem 0;
+}
 @media (hover: hover) {
     .project__name:hover {
         color: var(--color-white);
