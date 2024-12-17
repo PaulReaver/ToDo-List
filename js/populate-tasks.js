@@ -50,6 +50,10 @@ export default function populateTasks() {
                 const bottomSection = document.createElement('div');
                 bottomSection.classList.add('note__bottom-section');
 
+                // create handles section
+                const handles = document.createElement('div');
+                handles.classList.add('note__handles');
+
                 // create priority label
                 const priorityLabel = document.createElement('label');
                 priorityLabel.setAttribute('for', 'note__priority');
@@ -122,12 +126,8 @@ export default function populateTasks() {
                 priorityLabel.append(notePriority);
                 dateLabel.append(noteDate);
                 bottomSection.append(priorityLabel, dateLabel);
-                note.append(
-                    noteTitle,
-                    noteDescription,
-                    bottomSection,
-                    noteDeleteButton
-                );
+                handles.append(noteDeleteButton);
+                note.append(noteTitle, noteDescription, bottomSection, handles);
                 notesTasks.append(note);
             }
 
