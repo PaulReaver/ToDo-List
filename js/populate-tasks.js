@@ -21,6 +21,7 @@ export default function populateTasks() {
                 const noteTitle = document.createElement('input');
                 noteTitle.setAttribute('type', 'text');
                 noteTitle.classList.add('note__title');
+                noteTitle.setAttribute('name', `note-title${j}`);
                 noteTitle.value = projectList[i].tasks[j].title;
                 noteTitle.onblur = () => {
                     if (projectList[i].tasks[j].title !== noteTitle.value) {
@@ -31,6 +32,7 @@ export default function populateTasks() {
                 // create description
                 const noteDescription = document.createElement('textarea');
                 noteDescription.classList.add('note__description');
+                noteDescription.setAttribute('name', `note-description${j}`);
                 noteDescription.value = projectList[i].tasks[j].description;
                 noteDescription.addEventListener(
                     'input',
@@ -50,19 +52,15 @@ export default function populateTasks() {
                 const bottomSection = document.createElement('div');
                 bottomSection.classList.add('note__bottom-section');
 
-                // create handles section
-                const handles = document.createElement('div');
-                handles.classList.add('note__handles');
-
                 // create priority label
                 const priorityLabel = document.createElement('label');
-                priorityLabel.setAttribute('for', 'note__priority');
+                priorityLabel.setAttribute('for', `note__priority${j}`);
                 priorityLabel.textContent = 'Priority: ';
 
                 // create priority selection
                 const notePriority = document.createElement('select');
-                notePriority.classList.add('note__priority');
-                notePriority.setAttribute('name', 'note__priority');
+                notePriority.setAttribute('id', `note__priority${j}`);
+                notePriority.setAttribute('name', `note__priority${j}`);
                 notePriority.dataset.chosen = projectList[i].tasks[j].priority;
                 notePriority.onchange = function change() {
                     this.dataset.chosen = this.value;
@@ -97,14 +95,14 @@ export default function populateTasks() {
 
                 // create date label
                 const dateLabel = document.createElement('label');
-                dateLabel.setAttribute('for', 'note__date');
+                dateLabel.setAttribute('for', `note__date${j}`);
                 dateLabel.textContent = 'Due Date: ';
 
                 // create date selection
                 const noteDate = document.createElement('input');
                 noteDate.setAttribute('type', 'date');
-                noteDate.setAttribute('name', 'note__date');
-                noteDate.classList.add('note__date');
+                noteDate.setAttribute('name', `note__date${j}`);
+                noteDate.setAttribute('id', `note__date${j}`);
                 noteDate.value = projectList[i].tasks[j].date;
 
                 noteDate.onblur = () => {
@@ -112,6 +110,10 @@ export default function populateTasks() {
                         projectList[i].tasks[j].date = noteDate.value;
                     }
                 };
+
+                // create handles section
+                const handles = document.createElement('div');
+                handles.classList.add('note__handles');
 
                 // create delete note button
                 const noteDeleteButton = document.createElement('button');
