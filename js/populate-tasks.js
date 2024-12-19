@@ -25,9 +25,15 @@ export default function populateTasks() {
                 noteTitle.value = projectList[i].tasks[j].title;
                 noteTitle.onblur = () => {
                     if (projectList[i].tasks[j].title !== noteTitle.value) {
-                        projectList[i].tasks[j].title = noteTitle.value;
+                        projectList[i].tasks[j].title = noteTitle.value.trim();
+                        populateTasks();
                     }
                 };
+                noteTitle.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter') {
+                        event.preventDefault();
+                    }
+                });
 
                 // create description
                 const noteDescription = document.createElement('textarea');
@@ -44,7 +50,8 @@ export default function populateTasks() {
                         noteDescription.value
                     ) {
                         projectList[i].tasks[j].description =
-                            noteDescription.value;
+                            noteDescription.value.trim();
+                        populateTasks();
                     }
                 };
 
