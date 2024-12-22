@@ -44,6 +44,7 @@ export default function populateTasks() {
                     'input',
                     autoResizeDescription
                 );
+
                 noteDescription.onblur = () => {
                     if (
                         projectList[i].tasks[j].description !==
