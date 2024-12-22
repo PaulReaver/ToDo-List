@@ -291,7 +291,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 #add-note__description,
 .note__description {
-    display: block;
     font-size: 1rem;
     width: 100%;
     padding: 0.3rem 0.6rem;
