@@ -139,6 +139,9 @@ export default function populateTasks() {
                 handles.append(noteDeleteButton);
                 note.append(noteTitle, noteDescription, bottomSection, handles);
                 notesTasks.append(note);
+
+                noteDescription.style.height = 'auto';
+                noteDescription.style.height = `${noteDescription.scrollHeight}px`;
             }
 
             return;
