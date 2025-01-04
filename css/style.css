@@ -316,6 +316,10 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 #notes-tasks {
     margin-top: var(--gap-large);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--gap-large);
 }
 
 .note {
