@@ -6,7 +6,8 @@ const projectListUl = document.querySelector('#project-list');
 
 export default function populateProjectList() {
     projectListUl.replaceChildren();
-    for (let i = 0; i < projectList.length; i += 1) {
+    const projectListLength = projectList.length;
+    for (let i = 0; i < projectListLength; i += 1) {
         const projectItem = document.createElement('li');
         projectItem.classList.add('project');
         const projectName = document.createElement('h2');

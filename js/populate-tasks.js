@@ -10,9 +10,11 @@ export default function populateTasks() {
 
     notesTasks.replaceChildren();
 
-    for (let i = 0; i < projectList.length; i += 1) {
+    const projectListLength = projectList.length;
+    for (let i = 0; i < projectListLength; i += 1) {
         if (projectList[i].name === activeProject) {
-            for (let j = 0; j < projectList[i].tasks.length; j += 1) {
+            const projectTasksLength = projectList[i].tasks.length;
+            for (let j = 0; j < projectTasksLength; j += 1) {
                 // create the form
                 const note = document.createElement('form');
                 note.classList.add('note');
