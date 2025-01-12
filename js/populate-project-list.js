@@ -1,6 +1,7 @@
 import projectList from './project-list.js';
 import applyNotesCategory from './notes-category.js';
 import populateTasks from './populate-tasks.js';
+import { saveToLocalStorage } from './local-storage.js';
 
 const projectListUl = document.querySelector('#project-list');
 
@@ -77,6 +78,7 @@ export default function populateProjectList() {
             // Check if the project exists in the list before deleting it
             if (projectIndex >= 0 && projectIndex < projectList.length) {
                 projectList.splice(projectIndex, 1);
+                saveToLocalStorage('projects', projectList);
                 populateProjectList(); // Re-render the project list
             }
         }
