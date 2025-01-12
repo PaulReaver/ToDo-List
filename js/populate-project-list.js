@@ -29,8 +29,8 @@ export default function populateProjectList() {
         projectItem.append(projectName, projectDeleteButton);
         projectListUl.append(projectItem);
 
-        // Mark the last item as active
-        if (i === projectListLength - 1) {
+        // Mark the first item as active
+        if (i === 0) {
             projectItem.classList.add('project--active');
             populateTasks();
         }
