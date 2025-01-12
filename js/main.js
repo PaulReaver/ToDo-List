@@ -6,7 +6,10 @@ import '../css/style.css';
 import populateProjectList from './populate-project-list';
 import { addProject } from './project-list';
 import autoResizeDescription from './auto-resize-description';
-import { priorityReset, descriptionHeightReset } from './add-note-form-reset';
+import {
+    resetPriorityToDefault,
+    descriptionHeightReset,
+} from './add-note-form-reset';
 import addNote from './add-note';
 
 const addProjectForm = document.querySelector('.add-project');
@@ -23,7 +26,7 @@ addProjectForm.addEventListener('submit', (e) => {
 addNoteDescription.addEventListener('input', autoResizeDescription);
 
 addNoteForm.addEventListener('reset', () => {
-    priorityReset();
+    resetPriorityToDefault();
     descriptionHeightReset();
 });
 

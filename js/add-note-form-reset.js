@@ -1,7 +1,7 @@
 const addNotePriority = document.querySelector('select');
 const addNoteDescription = document.querySelector('#add-note__description');
 
-export function priorityReset() {
+export function resetPriorityToDefault() {
     addNotePriority.setAttribute('data-chosen', 'Low');
 }
 
