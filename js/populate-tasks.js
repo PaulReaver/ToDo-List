@@ -1,5 +1,6 @@
 import projectList from './project-list';
 import autoResizeDescription from './auto-resize-description';
+import { saveToLocalStorage } from './local-storage';
 
 const notesTasks = document.querySelector('#notes-tasks');
 
@@ -132,6 +133,7 @@ export default function populateTasks() {
                 noteDeleteButton.addEventListener('click', (event) => {
                     event.preventDefault();
                     projectList[i].tasks.splice(j, 1);
+                    saveToLocalStorage('projects', projectList);
                     populateTasks();
                 });
 
