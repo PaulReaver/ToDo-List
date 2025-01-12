@@ -1,5 +1,6 @@
 import populateTasks from './populate-tasks';
 import projectList from './project-list';
+import { saveToLocalStorage } from './local-storage.js';
 
 class Note {
     constructor(title, description, priority, date) {
@@ -26,6 +27,9 @@ export default function addNote() {
     for (let i = 0; i < projectList.length; i += 1) {
         if (activeProject === projectList[i].name) {
             projectList[i].tasks.push(note);
+
+            saveToLocalStorage('projects', projectList);
+
             populateTasks();
             return;
         }
