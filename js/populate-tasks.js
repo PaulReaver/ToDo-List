@@ -29,6 +29,7 @@ export default function populateTasks() {
                 noteTitle.onblur = () => {
                     if (projectList[i].tasks[j].title !== noteTitle.value) {
                         projectList[i].tasks[j].title = noteTitle.value.trim();
+                        saveToLocalStorage('projects', projectList);
                         populateTasks();
                     }
                 };
@@ -55,6 +56,7 @@ export default function populateTasks() {
                     ) {
                         projectList[i].tasks[j].description =
                             noteDescription.value.trim();
+                        saveToLocalStorage('projects', projectList);
                         populateTasks();
                     }
                 };
@@ -101,6 +103,7 @@ export default function populateTasks() {
                         projectList[i].tasks[j].priority !== notePriority.value
                     ) {
                         projectList[i].tasks[j].priority = notePriority.value;
+                        saveToLocalStorage('projects', projectList);
                     }
                 };
 
@@ -119,6 +122,7 @@ export default function populateTasks() {
                 noteDate.onblur = () => {
                     if (projectList[i].tasks[j].date !== noteDate.value) {
                         projectList[i].tasks[j].date = noteDate.value;
+                        saveToLocalStorage('projects', projectList);
                     }
                 };
 
