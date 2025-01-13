@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A simple ToDo List app" />
+        <meta name="color-scheme" content="dark" />
+        <title>ToDo List</title>
+        <link rel="icon" href="./assets/favicon-BkXihUim.ico" type="image/x-icon" />
+      <script type="module" crossorigin src="./assets/index-CxGT3mWx.js"></script>
+      <link rel="stylesheet" crossorigin href="./assets/index-XeS5I8c4.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="primary-header">
+                <h1>ToDo List</h1>
+            </header>
+            <div id="content">
+                <aside>
+                    <form class="add-project">
+                        <input
+                            type="text"
+                            name="add-project__input"
+                            id="add-project__input"
+                            placeholder="Add a project..."
+                            maxlength="15"
+                        />
+                        <input
+                            name="add-project__submit"
+                            type="submit"
+                            value="&check;"
+                            id="add-project__submit"
+                        />
+                    </form>
+                    <nav>
+                        <ul id="project-list"></ul>
+                    </nav>
+                </aside>
+                <main>
+                    <header id="notes-header">
+                        <h2 class="notes-category">...</h2>
+                        <form class="add-note">
+                            <input
+                                type="text"
+                                id="add-note__title"
+                                placeholder="Add a title..."
+                            />
+                            <textarea
+                                placeholder="Add a description..."
+                                id="add-note__description"
+                                name="add-note__description"
+                                style="resize: none"
+                            ></textarea>
+                            <div class="add-note__bottom-section">
+                                <label for="add-note__priority"
+                                    >Priority:
+                                    <select
+                                        data-chosen="Low"
+                                        onchange="this.dataset.chosen = this.value;"
+                                        name="add-note__priority"
+                                        id="add-note__priority"
+                                    >
+                                        <option value="Low">Low</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="High">High</option>
+                                    </select>
+                                </label>
+                                <label for="add-note__date">
+                                    Due Date:
+                                    <input
+                                        type="date"
+                                        name="add-note__date"
+                                        id="add-note__date"
+                                /></label>
+                            </div>
+                            <div class="add-note__handles">
+                                <input
+                                    name="add-note__reset"
+                                    type="reset"
+                                    value="&#10005;"
+                                    id="add-note__reset"
+                                />
+                                <input
+                                    name="add-note__submit"
+                                    type="submit"
+                                    value="&check;"
+                                    id="add-note__submit"
+                                />
+                            </div>
+                        </form>
+                    </header>
+                    <div id="notes-tasks"></div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
